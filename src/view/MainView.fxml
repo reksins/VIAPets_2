@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity"
+      minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0"
+      prefWidth="640.0" stylesheets="@../MyStyles.css"
+      userData="VIAPets store app" xmlns="http://javafx.com/javafx/19"
+      fx:controller="view.MainViewController">
+    <MenuBar>
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem fx:id="exitMenuItem" mnemonicParsing="false"
+                      onAction="#handleActions" text="Exit"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="About">
+            <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false"
+                      onAction="#handleActions" text="About"/>
+        </Menu>
+    </MenuBar>
+    <FlowPane alignment="CENTER" hgap="60.0" vgap="20.0"
+              maxWidth="Infinity" maxHeight="Infinity"
+              minWidth="0" minHeight="0">
+        <Button fx:id="KennelBookingsButton" mnemonicParsing="false"
+                onAction="#handleActions" prefHeight="80.0"
+                prefWidth="120.0" styleClass="MainButton"
+                text="Kennel Bookings"/>
+        <Button fx:id="CustomersButton" mnemonicParsing="false"
+                onAction="#handleActions" prefHeight="80.0"
+                prefWidth="120.0" styleClass="MainButton"
+                text="Customers"/>
+        <Button fx:id="PetsForSaleButton" mnemonicParsing="false"
+                onAction="#handleActions" prefHeight="80.0"
+                prefWidth="120.0" styleClass="MainButton"
+                text="Pets for sale"/>
+        <Button fx:id="AddAPetButton" mnemonicParsing="false"
+                onAction="#handleActions" prefHeight="80.0"
+                prefWidth="120.0" styleClass="MainButton"
+                text="Add a Pet"/>
+        <Button fx:id="AddACustomerButton" mnemonicParsing="false"
+                onAction="#handleActions" prefHeight="80.0"
+                prefWidth="120.0" styleClass="MainButton"
+                text="Add a customer"/>
+        <Button fx:id="AddABookingButton" mnemonicParsing="false"
+                onAction="#handleActions" prefHeight="80.0"
+                prefWidth="120.0" styleClass="MainButton"
+                text="Add a booking"/>
+    </FlowPane>
+</VBox>

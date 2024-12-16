@@ -1,0 +1,15 @@
+.root{
+   -fx-background:#d3d3d3;
+}
+
+.MainButton
+{
+  -fx-background-radius:5px;
+  -fx-font-weight:bold;
+}
+
+.button
+{
+  -fx-text-fill:#FFFFFF;
+  -fx-background-color:#939393;
+}

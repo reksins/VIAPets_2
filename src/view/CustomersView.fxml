@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="TOP_CENTER" prefHeight="390.0" prefWidth="590.0"
+      stylesheets="@../MyStyles.css" userData="All Customers"
+      xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="view.CustomersController">
+    <padding>
+        <Insets bottom="5.0"/>
+    </padding>
+    <MenuBar>
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem fx:id="exitMenuItem" mnemonicParsing="false"
+                      onAction="#handleActions" text="Exit"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+            <CheckMenuItem fx:id="editAreaMenuItem"
+                           mnemonicParsing="false"
+                           onAction="#handleActions"
+                           text="Edit customer area"/>
+        </Menu>
+    </MenuBar>
+    <TextArea fx:id="allCustomersArea" editable="false" prefColumnCount="50"
+              prefRowCount="16"/>
+    <Button fx:id="getButton" mnemonicParsing="false" onAction="#handleActions"
+            text="Get Customers">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Button>
+    <FlowPane prefHeight="20.0">
+        <Button fx:id="backButton" mnemonicParsing="false"
+                onAction="#handleActions" text="Back">
+            <FlowPane.margin>
+                <Insets left="10.0" top="10.0"/>
+            </FlowPane.margin>
+        </Button>
+    </FlowPane>
+</VBox>
