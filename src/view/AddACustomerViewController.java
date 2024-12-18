@@ -36,7 +36,7 @@ public class AddACustomerViewController
 
   public void reset()
   {
-    updatePetBox();
+  //  updatePetBox();
   }
 
   public Scene getScene()
@@ -58,7 +58,7 @@ public class AddACustomerViewController
       temp1.getAllCustomers();
       temp1.addCustomer(temp);
       modeManager.saveCustomers(temp1);
-      updatePetBox();
+      // updatePetBox();
     }
     else if (e.getSource() == backButton)
     {
@@ -103,7 +103,7 @@ public class AddACustomerViewController
       alert.showAndWait();
     }
   }
-
+/*
   private void updatePetBox()
   {
     int currentIndex = petComboBox.getSelectionModel().getSelectedIndex();
@@ -126,5 +126,5 @@ public class AddACustomerViewController
     {
       petComboBox.getSelectionModel().select(currentIndex);
     }
-  }
+  } */
 }

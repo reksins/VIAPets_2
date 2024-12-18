@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <VBox prefHeight="390.0" prefWidth="590.0" spacing="20.0"
-      stylesheets="@../MyStyles.css" userData="Change Country"
+      stylesheets="@../MyStyles.css" userData="Add a customer"
       xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="view.AddACustomerViewController">
     <padding>

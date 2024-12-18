@@ -16,6 +16,9 @@ public class ViewHandler
   private KennelBookingsController kennelBookingsController;
   private PetsController petsController;
   private CustomersController customersController;
+  private AddACustomerViewController addCustomersViewController;
+  private AddAPetViewController addAPetViewController;
+  // private AddABookingViewController addABookingViewController;
 
   private ModeManager modeManager;
 
@@ -31,6 +34,7 @@ public class ViewHandler
     loadViewPets();
     loadViewKennelBookings();
     loadViewCustomers();
+    loadAddACustomer();
     openView("MainView");
   }
 
@@ -54,6 +58,14 @@ public class ViewHandler
         stage.setScene(customersController.getScene());
         customersController.reset();
         break;
+      case "AddACostumersView":
+        stage.setScene(addCustomersViewController.getScene());
+        customersController.reset();
+        break;
+      /*case "AddAPetView":
+        stage.setScene(AddAPetViewController.getScene());
+        customersController.reset();
+        break; */
     }
 
     String title = "";
@@ -124,6 +136,22 @@ public class ViewHandler
       Region root = loader.load();
       petsController = loader.getController();
       petsController.init(this, new Scene(root), modeManager);
+    }
+    catch (IOException e)
+    {
+      e.printStackTrace();
+    }
+  }
+
+  private void loadAddACustomer()
+  {
+    try
+    {
+      FXMLLoader loader = new FXMLLoader();
+      loader.setLocation(getClass().getResource("AddACustomerView.fxml"));
+      Region root = loader.load();
+      addCustomersViewController = loader.getController();
+      addCustomersViewController.init(this, new Scene(root), modeManager);
     }
     catch (IOException e)
     {
