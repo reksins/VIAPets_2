@@ -7,8 +7,6 @@ import javafx.scene.control.*;
 import model.ModeManager;
 import model.PetList;
 
-import java.util.ArrayList;
-
 public class PetsController
 {
   private Scene scene;
@@ -87,7 +85,7 @@ public class PetsController
 
   private void updatePetArea()
   {
-    PetList pets = modeManager.getAllPets();
+    PetList pets = modeManager.getAllPetsFile();
     allPetsArea.setText(pets.toString());
   }
 }

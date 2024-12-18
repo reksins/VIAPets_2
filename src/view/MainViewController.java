@@ -18,6 +18,9 @@ public class MainViewController
   @FXML Button KennelBookingsButton;
   @FXML Button PetsForSaleButton;
   @FXML Button CustomersButton;
+  @FXML Button AddABookingButton;
+  @FXML Button AddACustomerButton;
+  @FXML Button AddAPetButton;
   @FXML MenuItem exitMenuItem;
   @FXML MenuItem aboutMenuItem;
 
@@ -49,6 +52,18 @@ public class MainViewController
     else if(e.getSource() == CustomersButton)
     {
       viewHandler.openView("CustomersView");
+    }
+    else if(e.getSource() == AddABookingButton)
+    {
+      viewHandler.openView("AddABookingView");
+    }
+    else if(e.getSource() == AddAPetButton)
+    {
+      viewHandler.openView("AddAPetView");
+    }
+    else if(e.getSource() == AddACustomerButton)
+    {
+      viewHandler.openView("AddACustomerView");
     }
     else if (e.getSource() == exitMenuItem)
     {

@@ -41,7 +41,7 @@ public class ModeManager
     }
 
     // Use the utils.MyFileHandler class to retrieve a model.StudentList object with all Students
-    public PetList getAllPets()
+    public PetList getAllPetsFile()
     {
         PetList allPets = new PetList();
 
@@ -114,9 +114,9 @@ public class ModeManager
     public PetList getStorePets(String position)
     {
         PetList PetsForSale = new PetList();
-        PetList allPets = getAllPets();
+        PetList allPets = getAllPetsFile();
 
-        for(int i = 0; i < allPets.getAllPets().size(); i++)
+        for(int i = 0; i < allPets.getAllPetsFile().size(); i++)
         {
             if(allPets.(i).getCountry().equals(fromCountry))
             {
@@ -133,6 +133,38 @@ public class ModeManager
         try
         {
             MyFileHandler.writeToBinaryFile(fileName, pets);
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("File not found");
+        }
+        catch (IOException e)
+        {
+            System.out.println("IO Error writing to file");
+        }
+    }
+
+    public void saveCustomers(CustomerList customers)
+    {
+        try
+        {
+            MyFileHandler.writeToBinaryFile(fileName, customers);
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("File not found");
+        }
+        catch (IOException e)
+        {
+            System.out.println("IO Error writing to file");
+        }
+    }
+
+    public void saveBookings(BookingList bookings)
+    {
+        try
+        {
+            MyFileHandler.writeToBinaryFile(fileName, bookings);
         }
         catch (FileNotFoundException e)
         {

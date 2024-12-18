@@ -11,12 +11,21 @@ public class Customer {
     private ArrayList<Pet> pets;
 
 
-    public Customer (String name, String email, String phone) {
+    public Customer (String name, String email, String phone, Pet pet) {
 
+        pets = new ArrayList<>();
         this.name = name;
         this.email = email;
         this.phone = phone;
-        this.pets = new ArrayList<>();
+        pets.add(pet);
+    }
+
+    public Customer (String name, String email, String phone) {
+
+        pets = new ArrayList<>();
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
     }
 
     public String getName() {return name;}
