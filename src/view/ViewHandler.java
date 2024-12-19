@@ -1,4 +1,4 @@
-package view;
+package view; // class that manages the different views of the GUI, such as Pet, Customer, Bookings view etc
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -38,7 +38,7 @@ public class ViewHandler
     openView("MainView");
   }
 
-  public void openView(String id)
+  public void openView(String id) // method of opening the specific view based on its id
   {
     switch (id)
     {
@@ -75,11 +75,11 @@ public class ViewHandler
       title = stage.getScene().getRoot().getUserData().toString();
     }
 
-    stage.setTitle(title);
+    stage.setTitle(title); // sets the current title of the view
     stage.show();
   }
 
-  private void loadViewMain()
+  private void loadViewMain() // loads the specific view mentiod using the Controller and fxml file
   {
     try
     {
@@ -158,22 +158,4 @@ public class ViewHandler
       e.printStackTrace();
     }
   }
-
-  /*
-    It's not necessary in this example, but sometimes it might be needed
-    for one controller to access/modify data in another controller's view.
-    That can be done by creating a get-method in this ViewHandler class for
-    the controller of the view that must be accessed. E.g.:
-
-     public kennelBookingsController getKennelBookingsController()
-     {
-       return kennelBookingsController;
-     }
-
-    It's then possible in e.g. the MainViewController to call this
-    get-method on its ViewHandler object, to get access to any methods
-    made in the kennelBookingsController. E.g.:
-
-     viewHandler.getKennelBookingsController().aSetMethod("New data to set");
-  */
 }

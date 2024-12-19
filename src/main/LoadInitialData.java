@@ -1,11 +1,11 @@
-/*package main;// import all models and utilities
+package main;// import all models and utilities
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/*public class LoadInitialData
+public class LoadInitialData
 {
    public static void main(String[] args)
    {
@@ -56,18 +56,14 @@ import java.util.Arrays;
          {
             String temp = petsArray[i];
             String[] tempArr = temp.split(","); // creates temporary array for storing specific pet data from the text file
-               /* we should divide if can the pets between types (dogscats, fish, etc)
-               so we could sort them and the specific attributes they need already in the model class instead of main method */
-            /*String name = tempArr[0];
+            String name = tempArr[0];
             String species = tempArr[1];
             String age = tempArr[2];
             String storepet = tempArr[3];
             String gender = tempArr[4];
             String comment = tempArr[5];
-               /* pets.add(new pet(whatever attributes we decide to store));
-               here we create a new pet for each instance of pet the text file
-                */
-       /*  }
+               pets.add(new pet(whatever attributes we decide to store));
+         }
       }
          catch (FileNotFoundException e)
       {
@@ -90,4 +86,3 @@ import java.util.Arrays;
          System.out.println("Done");
    }
 }
-*/

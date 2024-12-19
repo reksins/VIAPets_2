@@ -1,4 +1,4 @@
-package view;
+package view; // controller class of the pets view fxml file, controls the actions performed in this specific view
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,7 +37,7 @@ public class PetsController
     return scene;
   }
 
-  public void handleActions(ActionEvent e)
+  public void handleActions(ActionEvent e) // handles the specific button presses with their related action
   {
     if (e.getSource() == getButton)
     {
@@ -83,7 +83,7 @@ public class PetsController
     }
   }
 
-  private void updatePetArea()
+  private void updatePetArea() // updates the pet area, using the file for information storage as the source
   {
     PetList pets = modeManager.getAllPetsFile();
     allPetsArea.setText(pets.toString());

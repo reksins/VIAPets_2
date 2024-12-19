@@ -24,7 +24,7 @@ public class ModeManager {
 }
 */
 
-package model;
+package model; // handles the reading and writing the specific lists to a file, used to store and update information
 
 import utils.MyFileHandler;
 

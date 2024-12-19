@@ -1,4 +1,4 @@
-package utils;
+package utils; // handles writing and reading text and bin files
 
 import java.io.*;
 import java.util.ArrayList;

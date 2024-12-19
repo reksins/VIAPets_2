@@ -1,4 +1,4 @@
-package view;
+package view; //class that starts the GUI of the application
 
 import javafx.application.Application;
 import javafx.stage.Stage;

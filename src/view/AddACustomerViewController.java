@@ -1,4 +1,4 @@
-package view;
+package view; // handles the AddACustomerView with all it's related actions
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,7 +34,7 @@ public class AddACustomerViewController
     this.modeManager = modeManager;
   }
 
-  public void reset()
+  public void reset() // updates the pet dropdown menu where you can select a pet to link it to a customer
   {
   //  updatePetBox();
   }
@@ -46,7 +46,7 @@ public class AddACustomerViewController
 
   public void handleActions(ActionEvent e)
   {
-    if (e.getSource() == updateButton)
+    if (e.getSource() == updateButton) // updates and saves the customer information to a customer list
     {
       String name = nameField.getText();
       String email = emailField.getText();
@@ -104,7 +104,7 @@ public class AddACustomerViewController
     }
   }
 /*
-  private void updatePetBox()
+  private void updatePetBox() // updates the dropdown menu of the pet box, for accurate selection
   {
     int currentIndex = petComboBox.getSelectionModel().getSelectedIndex();
 
